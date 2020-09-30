@@ -1,0 +1,19 @@
+<form action="https://www.uni-regensburg.de/typo3conf/ext/ur_modules/Resources/Public/epub/epub.php" target="my-iframe" method="post" style="display: none" id="pubform">
+
+    <input type="text" name="language" id="language" value="de">
+    <input type="text" name="xml" id="xml" value="https://epub.uni-regensburg.de/cgi/exportview/people/Putz=3ABenedikt=3A=3A/XMLCit/Putz=3ABenedikt=3A=3A.xml">
+    <input type="submit" value="post">
+
+</form>
+
+<iframe name="my-iframe" src="https://www.uni-regensburg.de/typo3conf/ext/ur_modules/Resources/Public/epub/epub.php"></iframe>
+
+<script type="text/javascript">
+  window.onload=function(){
+    var auto = setTimeout(function(){ submitform(); }, 100);
+
+    function submitform(){
+      document.forms["pubform"].submit();
+    }
+  }
+</script>
